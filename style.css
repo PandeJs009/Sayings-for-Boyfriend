@@ -1,0 +1,154 @@
+/* Reset Margin dan Padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Gaya Body */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #ffe6f0;
+  color: #333;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animasi Hati di Latar Belakang */
+.hearts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 105, 180, 0.7);
+  top: -10px;
+  border-radius: 50%;
+  animation: fall 10s infinite;
+}
+
+.heart:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+  width: 15px;
+  height: 15px;
+  background-color: rgba(255, 20, 147, 0.6);
+}
+
+.heart:nth-child(2) {
+  left: 30%;
+  animation-delay: 2s;
+  width: 25px;
+  height: 25px;
+  background-color: rgba(255, 105, 180, 0.8);
+}
+
+.heart:nth-child(3) {
+  left: 50%;
+  animation-delay: 4s;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 20, 147, 0.7);
+}
+
+.heart:nth-child(4) {
+  left: 70%;
+  animation-delay: 6s;
+  width: 18px;
+  height: 18px;
+  background-color: rgba(255, 105, 180, 0.6);
+}
+
+.heart:nth-child(5) {
+  left: 90%;
+  animation-delay: 8s;
+  width: 22px;
+  height: 22px;
+  background-color: rgba(255, 20, 147, 0.8);
+}
+
+/* Keyframes Animasi Hati */
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* Konten Utama */
+.container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+  font-size: 2.5rem;
+  color: #ff1493;
+  margin-bottom: 1rem;
+}
+
+.container p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.container button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #ff69b4;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.container button:hover {
+  background-color: #ff1493;
+}
+
+#surprise-message {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #e91e63;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Animasi Pesan Tersembunyi */
+#surprise-message p {
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
